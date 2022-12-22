@@ -49,13 +49,12 @@ function renderGame() {
 }
 
 function newCard() {
-  console.log("drawing a new card from the deck!");
-  let card = getRandomCard();
-  sum += card;
-  cards.push(card);
-  renderGame();
-  console.log(cards);
-  console.log(sum);
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    renderGame();
+  }
 
   // sumEl.textContent = `Sum: ${newSum}`;
 }
